@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced BMI Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Advanced BMI Calculator</h1>
+            <p>Calculate your Body Mass Index quickly and easily</p>
+        </header>
+
+        <main>
+
+            <!-- Calculator Card -->
+            <section class="calculator-card">
+
+                <h2>BMI Calculator</h2>
+
+                <form id="bmiForm">
+
+                    <!-- Age -->
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter your age"
+                            min="2"
+                            max="120"
+                            required
+                        >
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="input-group">
+                        <label>Gender</label>
+
+                        <div class="gender-options">
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                    required
+                                >
+                                <span>Male</span>
+                            </label>
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                <span>Female</span>
+                            </label>
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                <span>Other</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <!-- Height -->
+                    <div class="input-group">
+                        <label for="height">Height (cm)</label>
+
+                        <input
+                            type="number"
+                            id="height"
+                            placeholder="Example: 170"
+                            min="50"
+                            max="250"
+                            step="0.1"
+                            required
+                        >
+                    </div>
+
+                    <!-- Weight -->
+                    <div class="input-group">
+                        <label for="weight">Weight (kg)</label>
+
+                        <input
+                            type="number"
+                            id="weight"
+                            placeholder="Example: 65"
+                            min="10"
+                            max="500"
+                            step="0.1"
+                            required
+                        >
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="buttons">
+
+                        <button type="submit" class="calculate-btn">
+                            Calculate BMI
+                        </button>
+
+                        <button
+                            type="button"
+                            class="reset-btn"
+                            id="resetBtn"
+                        >
+                            Reset
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <!-- Result -->
+                <div id="result" class="result hidden">
+
+                    <h2>Your BMI Result</h2>
+
+                    <div class="bmi-number">
+                        <span id="bmiValue">0</span>
+                    </div>
+
+                    <p class="category-label">Category</p>
+
+                    <div id="bmiCategory" class="category">
+                        -
+                    </div>
+
+                    <p id="bmiMessage" class="message"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- BMI Information -->
+            <section class="info-card">
+
+                <h2>BMI Categories</h2>
+
+                <div class="category-table">
+
+                    <div class="table-row table-header">
+                        <span>BMI</span>
+                        <span>Category</span>
+                    </div>
+
+                    <div class="table-row">
+                        <span>Below 18.5</span>
+                        <span>Underweight</span>
+                    </div>
+
+                    <div class="table-row">
+                        <span>18.5 – 24.9</span>
+                        <span>Normal Weight</span>
+                    </div>
+
+                    <div class="table-row">
+                        <span>25.0 – 29.9</span>
+                        <span>Overweight</span>
+                    </div>
+
+                    <div class="table-row">
+                        <span>30.0 and above</span>
+                        <span>Obesity</span>
+                    </div>
+
+                </div>
+
+                <p class="note">
+                    Note: BMI is a general screening measure and does not
+                    directly measure body fat or overall health.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- History -->
+        <section class="history-card">
+
+            <div class="history-header">
+
+                <h2>BMI History</h2>
+
+                <button
+                    type="button"
+                    id="clearHistoryBtn"
+                    class="clear-history-btn"
+                >
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyContainer">
+
+                <p class="empty-history">
+                    No BMI calculations yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Advanced BMI Calculator © 2026</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

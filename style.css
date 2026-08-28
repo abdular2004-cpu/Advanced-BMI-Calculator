@@ -1,0 +1,444 @@
+/* ==============================
+   GENERAL RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    min-height: 100vh;
+    color: #1e293b;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* ==============================
+   MAIN GRID
+================================= */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* ==============================
+   CARDS
+================================= */
+
+.calculator-card,
+.info-card,
+.history-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.calculator-card h2,
+.info-card h2,
+.history-card h2 {
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   INPUT GROUP
+================================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #6366f1;
+}
+
+
+/* ==============================
+   GENDER
+================================= */
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gender-option {
+    flex: 1;
+    min-width: 80px;
+}
+
+.gender-option input {
+    display: none;
+}
+
+.gender-option span {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gender-option input:checked + span {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+}
+
+
+/* ==============================
+   BUTTONS
+================================= */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculate-btn {
+    background: #6366f1;
+    color: white;
+}
+
+.calculate-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.reset-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* ==============================
+   RESULT
+================================= */
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.hidden {
+    display: none;
+}
+
+.bmi-number {
+    width: 110px;
+    height: 110px;
+    margin: 15px auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6366f1;
+    color: white;
+}
+
+.bmi-number span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.category-label {
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.category {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.message {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   BMI TABLE
+================================= */
+
+.category-table {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-header {
+    background: #6366f1;
+    color: white;
+    font-weight: bold;
+}
+
+.note {
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   HISTORY
+================================= */
+
+.history-card {
+    margin-top: 25px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.clear-history-btn {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clear-history-btn:hover {
+    background: #dc2626;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+
+/* ==============================
+   HISTORY ITEM
+================================= */
+
+.history-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.history-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.history-item small {
+    color: #64748b;
+}
+
+.delete-history {
+    border: none;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 8px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   CATEGORY COLORS
+================================= */
+
+.underweight {
+    color: #f59e0b;
+}
+
+.normal {
+    color: #16a34a;
+}
+
+.overweight {
+    color: #ea580c;
+}
+
+.obese {
+    color: #dc2626;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 800px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .history-item {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .delete-history {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 94%;
+        padding: 20px 0;
+    }
+
+    .calculator-card,
+    .info-card,
+    .history-card {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .gender-options {
+        flex-direction: column;
+    }
+
+    .history-item {
+        grid-template-columns: 1fr;
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
